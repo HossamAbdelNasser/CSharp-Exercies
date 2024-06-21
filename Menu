@@ -1,0 +1,31 @@
+//C# 10
+
+Console.WriteLine("Menu:\n1. Meat\n2. Pultery\n3. Fish\n4. Dessert");
+
+int choice = Convert.ToInt32(Console.ReadLine());
+
+float VAT = 1.14F;
+float total;
+
+switch (choice) {
+
+    case 1:
+        Console.WriteLine("Meat!");
+        total = VAT * 30;
+        Console.WriteLine($"Total:\n${total}");
+        break;
+    case 2:
+        Console.WriteLine("Chicken!");
+        break;
+    case 3:
+        Console.WriteLine("Fish!");
+        break;
+    case 4:
+        Console.WriteLine("Dessert!");
+        break;
+    default:
+        Console.WriteLine("Not on the menu");
+        break;
+}
+
+
