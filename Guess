@@ -1,0 +1,15 @@
+Console.WriteLine("Guess a number: ");
+
+while (true) {
+    int right = 27;
+    int guess = Convert.ToInt32(Console.ReadLine());
+
+    if (guess == right) {
+        Console.WriteLine("You guessed right");
+            break;
+    } else if (guess > right) {
+        Console.WriteLine("You guessed higher than the number");
+    } else {
+        Console.WriteLine("You guessed lower than the number");
+    }
+}
