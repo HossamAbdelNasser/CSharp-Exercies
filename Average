@@ -1,0 +1,13 @@
+
+int[] ages = { 30, 24, 22, 19, 25, 31, 32};
+
+int total=0;
+
+for (int i = 0; i < ages.Length; i++) {
+
+    total += ages[i];
+}
+
+int average = total / ages.Length;
+
+Console.WriteLine(average);
