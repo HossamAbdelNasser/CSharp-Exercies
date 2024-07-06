@@ -1,0 +1,34 @@
+
+
+Rectangle rectangle = new Rectangle(5,10);
+
+Console.WriteLine("Width: " + rectangle.GetWidth());
+Console.WriteLine("Height: " + rectangle.GetHeight());
+Console.WriteLine("Area: " + rectangle.GetArea());
+
+
+class Rectangle
+{
+    private float _width;
+    private float _height;
+    private float _area;
+
+    public Rectangle(float width, float height) {
+        _width = width;
+        _height = height;
+        _area = width * height;
+    }
+
+    public float GetArea() => _area;
+    public float GetWidth() => _width;
+    public float GetHeight() => _height;
+}
+
+
+
+
+
+
+
+
+
