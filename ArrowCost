@@ -1,0 +1,27 @@
+Arrow a = new Arrow();
+Console.WriteLine(a.ArrowCost(Arrow.Arrowhead.Steel, Arrow.Fletch.TurkeyFeathers, 20));
+
+class Arrow
+{
+    public double Shaft;
+    public enum Arrowhead { Steel = 10, Wood = 3, Obsidian = 5};
+    public enum Fletch { Plastic = 10, TurkeyFeathers = 5, GooseFeathers = 3 };
+
+    public double ArrowCost(Arrowhead ah, Fletch f, double shaft) {
+        int arrowhead = (int)ah;
+        int fletch = (int)f;
+
+        double ShaftCost = (0.05 * shaft);
+        double totalcost = arrowhead + fletch + ShaftCost;
+
+        return totalcost;
+    }
+}
+
+
+
+
+
+
+
+
