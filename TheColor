@@ -1,0 +1,23 @@
+Color color = new Color(255, 255, 30);
+
+Console.WriteLine(color._color);
+Console.WriteLine(Color.White);
+
+public class Color
+{
+    public (int R, int G, int B) _color { get; set; }
+
+    public static (int R, int G, int B) White { get; set; } = (255, 255, 255);
+    public static (int R, int G, int B) Black { get; set; } = (0,0,0);
+    public static (int R, int G, int B) Red { get; set; } = (255, 0, 0);
+    public static (int R, int G, int B) Orange { get; set; } = (255, 165, 0);
+    public static (int R, int G, int B) Yellow { get; set; } = (255, 255, 0);
+    public static (int R, int G, int B) Green { get; set; } = (0, 128, 0);
+    public static (int R, int G, int B) Blue { get; set; } = (0, 0, 255);
+    public static (int R, int G, int B) Purple { get; set; } = (128, 0, 128);
+
+    public Color(int red, int green, int blue) {
+        _color = (red, green, blue);
+    }
+}
+
