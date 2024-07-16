@@ -1,0 +1,29 @@
+
+Point origin = new Point();
+Point point1 = new Point(2, 3);
+Point point2 = new Point(-4, 0);
+
+
+Console.WriteLine($"Origin: ({origin.X}, {origin.Y})");
+Console.WriteLine($"Point 1: ({point1.X}, {point1.Y})");
+Console.WriteLine($"Point 2: ({point2.X}, {point2.Y})");
+
+
+public class Point {
+
+    public float X;
+    public float Y;
+
+   public Point(float x, float y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    public Point()
+    { 
+        X = 0;
+        Y = 0;
+    }
+}
+
