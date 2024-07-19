@@ -1,0 +1,38 @@
+Card card = new Card(Card.Colors.Red, Card.Rank.Ten);
+
+Console.WriteLine($"Card: {card._color} {card._rank}");
+Console.WriteLine(card.isNumber(card._rank));
+
+//To display all the possible card colors and ranks
+for (int i = 0; i < 4; i++)
+{
+    for (int j = 1; j <= 14; j++) {
+
+        Console.WriteLine($"The {(Card.Colors)i} {(Card.Rank)j}");
+    }
+}
+
+public class Card {
+
+    public Colors _color;
+    public Rank _rank;
+
+    public enum Colors { Red, Green, Blue, Yellow }
+
+    public enum Rank { One = 1, Two, Three, Four, Five, Six, Seven, Eight,
+        Nine, Ten, DollarSign, Percent, Hat, Ampersand }
+
+   public Card (Colors color, Rank rank) {
+
+        _color = color;
+        _rank = rank;
+    }
+
+    public bool isNumber(Rank rank) {
+
+        if ((int)rank > 10) return false;
+
+        return true;
+    }
+
+}
