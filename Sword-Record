@@ -1,0 +1,11 @@
+Sword sword1 = new Sword(SwordMaterial.Iron, Gemstone.NULL, 50, 20);
+Sword sword2 = sword1 with { gem = Gemstone.Emerald, length = 60, CrossguardWidth = 30 };
+
+Console.WriteLine(sword1);
+Console.WriteLine(sword2);
+
+public record Sword (SwordMaterial material, Gemstone gem, int length, int CrossguardWidth);
+
+public enum Gemstone { Emerald, Amber, Sapphire, Diamond, RareBitstone, NULL }
+
+public enum SwordMaterial {Wood, Bronze, Iron, Steel,  RareBinarium}
