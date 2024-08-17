@@ -1,0 +1,22 @@
+int[] ChangeArrayElements(int[] numbers, NumberDelegate operation)
+{
+    int[] result = new int[numbers.Length];
+    for (int index = 0; index < result.Length; index++)
+        result[index] = operation(numbers[index]);
+
+    return result;
+}
+
+int AddOne(int number) => number + 1;
+int SubtractOne(int number) => number - 1;
+int Double(int number) => number * 2;
+
+
+int[] arr = new int[6];
+
+ arr = ChangeArrayElements(new int[] { 1, 2, 3, 4, 5 }, n => n + 1);
+
+foreach (int i in arr)
+    Console.Write(i + " ");
+
+public delegate int NumberDelegate(int number);
