@@ -1,0 +1,28 @@
+string[] scoreStrings = File.ReadAllLines("Score.csv");
+
+string[] tokens = scoreStrings[0].Split(' ');
+
+Console.WriteLine(tokens[0]);
+
+void SaveScores(List<Score> scores) { 
+
+    List<string> scoreStrings = new List<string>();
+    
+    foreach (Score score in scores)
+        scoreStrings.Add($"{score.Name} {score.Points} {score.Level}");
+
+    File.WriteAllLines("Score.csv", scoreStrings);
+
+}
+
+List<Score> MakeDefaultScores()
+{
+    return new List<Score>()
+{
+new Score("R2-D2", 12420, 15),
+new Score("C-3PO", 8543, 9),
+new Score("GONK", -1, 1)
+};
+}
+
+public record Score(string Name, int Points, int Level);
